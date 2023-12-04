@@ -14,7 +14,7 @@ Establecimientos populares de la CDMX y similitudes por colonias
 
 
 # Explicación del problema de negocio:
-@Héctor
+Para conocer la competitividad que tenga algún establecimiento utilizamos la API de foursquare para tener información de los negocios de la Ciudad de México, estos datos utilizados fueron tipo de negocio, coordenadas geográficas, nombre y colonia a la que pertenece. Con base en ello se creó una API que segmentara a todas las colonias de la ciudad por medio de un algoritmo k-means. Los datos resultantes de la segmentación se grafican en Shiny, con lo cual se puede conocer qué colonias son más parecidas entre sí, lo que da una ventaja competitiva, ya que si se consulta algún tipo de restaurante podremos observar si existe alguna colonia aledaña con un giro comercial parecido y además cuál es la actividad comercial predominante de dicha colonia.
 
 # Base de datos:
 La base de datos inicial se encuentra en un csv ya existente dentro de la carpeta app/data dentro de este repositorio.
