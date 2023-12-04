@@ -21,9 +21,9 @@ Con base en esta data, se creó una API que segmentara a todas las colonias de l
 La base de datos inicial se encuentra en un csv ya existente dentro de la carpeta app/data dentro de este repositorio.
 
 # Ejecución:
-1. Clonar el repositorio en el equipo
-2. Abrir una terminal, ir a la carpeta "app" del repositorio clonado
-3. Construir la imagen de docker: (docker-compose build y docker-compose up
+1. Clonar el repositorio en el equipo.
+2. Abrir una terminal, ir a la carpeta "app" del repositorio clonado.
+3. Construir la imagen de docker: docker-compose build y docker-compose up.
 
 # ¿Qué hace el producto?:
 1. Se crean los contenedores de la api, postgress, y shiny (y dash que fue un primer intento para nuestro mapa).
