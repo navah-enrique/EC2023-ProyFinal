@@ -1,0 +1,6 @@
+library(shiny)
+library(tidyverse)
+library(httr)
+library(jsonlite)
+library(DT)
+library(plotly)

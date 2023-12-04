@@ -1,0 +1,43 @@
+version: '3.7'
+
+services:
+  db:
+    image: "postgres"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data/flights.csv:/data/flights.csv
+      - ./data/venues_cdmx_paraentrenamiento.csv:/data/venues_cdmx_paraentrenamiento.csv
+      - ./data/venues_cdmx_completa.csv:/data/venues_cdmx_completa.csv
+      - ./data/venues_kmeans.csv:/data/venues_kmeans.csv
+      - pg_api:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  web:
+    build: ./api
+    env_file:
+      - ".env.local"
+    ports:
+      - 8080:8080
+    depends_on:
+     - "db"
+
+  dash:
+    build: ./dash
+    volumes:
+      - ./data/venues_cdmx_completa.csv:/data/venues_cdmx_completa.csv
+    ports:
+      - 8050:8050
+    depends_on:
+      - "db" 
+  shiny: 
+    build: ./shiny
+    volumes:
+      - ./data/venues_cdmx_completa.csv:/data/venues_cdmx_completa.csv
+      - ./data/venues_kmeans.csv:/data/venues_kmeans.csv
+    ports:
+      - 5000:4999
+volumes:
+  pg_api:
