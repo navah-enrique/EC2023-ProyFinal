@@ -9,7 +9,7 @@ Establecimientos populares de la CDMX y similitudes por colonias
 | ----------------------------------- | ------ | ---------------------- | ------------- |
 | Héctor Vilchis Peralta              | 214557 | hvilchis@itam.mx       | hectorvil     |
 | Enrique Nava Hernández              | 108807 | enavaher@itam.mx       | navah-enrique |
-| David Castillo                      | 197817 | david.castillo@itam.mx |               |
+| David Castillo                      | 134975 | david.castillo@itam.mx |               |
 
 
 # Explicación del problema de negocio:
